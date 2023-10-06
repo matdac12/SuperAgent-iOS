@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @AppStorage("userToken") var userToken: String = ""
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TextField("Enter your token", text: $userToken)
+                .padding()
+                .border(Color.gray, width: 0.5)
+
+            Button(action: {
+                // Save the token when the button is pressed
+                UserDefaults.standard.set(self.userToken, forKey: "userToken")
+            }) {
+                Text("Save Token")
+            }
+        }
     }
 }
 
