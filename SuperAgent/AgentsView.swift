@@ -11,7 +11,7 @@ import SwiftUI
 
 struct AgentsView: View {
     @AppStorage("userToken") var userToken: String = ""
-    @State private var agents: [Agent] = []
+    @State private var agents: [ProjectAgent] = []
 
     var body: some View {
         NavigationStack {

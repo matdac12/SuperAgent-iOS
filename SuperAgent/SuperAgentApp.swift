@@ -10,10 +10,12 @@ import SwiftData
 
 @main
 struct SuperAgentApp: App {
-
+    @AppStorage("isDarkMode") var isDarkMode: Bool = false
+    
     var body: some Scene {
         WindowGroup {
             MyTabView()
+                .environment(\.colorScheme, isDarkMode ? .dark : .light)
         }
     }
 }

@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "mysuperagentsdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/matdac12/mySuperAgentSDK",
+      "state" : {
+        "branch" : "main",
+        "revision" : "8b32571ace1d74af967ba036b093283667a1a1bd"
+      }
+    }
+  ],
+  "version" : 2
+}

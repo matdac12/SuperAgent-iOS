@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491940502AD7E85000D55543 /* mySuperAgent in Frameworks */ = {isa = PBXBuildFile; productRef = 4919404F2AD7E85000D55543 /* mySuperAgent */; };
+		491940522AD7E86900D55543 /* AgentsView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491940512AD7E86900D55543 /* AgentsView2.swift */; };
 		49BB2E232ACD827500EACBD3 /* SuperAgentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB2E222ACD827500EACBD3 /* SuperAgentApp.swift */; };
 		49BB2E252ACD827500EACBD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB2E242ACD827500EACBD3 /* ContentView.swift */; };
 		49BB2E292ACD827600EACBD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BB2E282ACD827600EACBD3 /* Assets.xcassets */; };
@@ -21,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		491940512AD7E86900D55543 /* AgentsView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsView2.swift; sourceTree = "<group>"; };
 		49BB2E1F2ACD827500EACBD3 /* SuperAgent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperAgent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BB2E222ACD827500EACBD3 /* SuperAgentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperAgentApp.swift; sourceTree = "<group>"; };
 		49BB2E242ACD827500EACBD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491940502AD7E85000D55543 /* mySuperAgent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +76,7 @@
 				49BB2E242ACD827500EACBD3 /* ContentView.swift */,
 				49BB2E322ACD833B00EACBD3 /* TabView.swift */,
 				49BB2E342ACD857C00EACBD3 /* AgentsView.swift */,
+				491940512AD7E86900D55543 /* AgentsView2.swift */,
 				49BB2E3C2ACF420200EACBD3 /* DataSourceView.swift */,
 				49BB2E3E2ACF469000EACBD3 /* DataSourceToAgent.swift */,
 				49BB2E282ACD827600EACBD3 /* Assets.xcassets */,
@@ -104,6 +109,9 @@
 			dependencies = (
 			);
 			name = SuperAgent;
+			packageProductDependencies = (
+				4919404F2AD7E85000D55543 /* mySuperAgent */,
+			);
 			productName = SuperAgent;
 			productReference = 49BB2E1F2ACD827500EACBD3 /* SuperAgent.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 49BB2E162ACD827500EACBD3;
+			packageReferences = (
+				4919404E2AD7E85000D55543 /* XCRemoteSwiftPackageReference "mySuperAgentSDK" */,
+			);
 			productRefGroup = 49BB2E202ACD827500EACBD3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -163,6 +174,7 @@
 				49BB2E252ACD827500EACBD3 /* ContentView.swift in Sources */,
 				49BB2E332ACD833B00EACBD3 /* TabView.swift in Sources */,
 				49BB2E392ACF30AE00EACBD3 /* SettingsView.swift in Sources */,
+				491940522AD7E86900D55543 /* AgentsView2.swift in Sources */,
 				49BB2E3D2ACF420200EACBD3 /* DataSourceView.swift in Sources */,
 				49BB2E3F2ACF469000EACBD3 /* DataSourceToAgent.swift in Sources */,
 				49BB2E372ACD862300EACBD3 /* Functions.swift in Sources */,
@@ -308,6 +320,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,6 +350,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4919404E2AD7E85000D55543 /* XCRemoteSwiftPackageReference "mySuperAgentSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/matdac12/mySuperAgentSDK";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4919404F2AD7E85000D55543 /* mySuperAgent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4919404E2AD7E85000D55543 /* XCRemoteSwiftPackageReference "mySuperAgentSDK" */;
+			productName = mySuperAgent;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 49BB2E172ACD827500EACBD3 /* Project object */;
 }

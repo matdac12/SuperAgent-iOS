@@ -10,14 +10,14 @@ import SwiftUI
 struct MyTabView: View {
     var body: some View {
         TabView {
-            AgentsView()
+            AgentsView2()
                 .tabItem {
-                    Label("Agents", systemImage: "1.square.fill")
+                    Label("Agents", systemImage: "play.fill")
                 }
             
             DataSourceView()
                 .tabItem {
-                    Label("Docs", systemImage: "2.square.fill")
+                    Label("Docs", systemImage: "doc.fill")
                 }
 //            
 //            ContentView()

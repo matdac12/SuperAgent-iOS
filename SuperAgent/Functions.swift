@@ -64,7 +64,7 @@ struct Functions {
     }
     
     
-    static func fetchAgents(token: String, completion: @escaping (Result<[Agent], Error>) -> Void) {
+    static func fetchAgents(token: String, completion: @escaping (Result<[ProjectAgent], Error>) -> Void) {
     let url = URL(string: "https://api.beta.superagent.sh/api/v1/agents")!
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
@@ -78,13 +78,13 @@ struct Functions {
                 if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
                    let dataArray = json["data"] as? [[String: Any]] {
                     
-                    var agents: [Agent] = []
+                    var agents: [ProjectAgent] = []
                     
                     for item in dataArray {
                         if let id = item["id"] as? String,
                            let name = item["name"] as? String,
                            let description = item["description"] as? String {
-                            let agent = Agent(id: id, name: name, description: description)
+                            let agent = ProjectAgent(id: id, name: name, description: description)
                             agents.append(agent)
                         }
                     }
@@ -344,21 +344,21 @@ struct Functions {
                         do {
                             if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
                                let dataArray = json["data"] as? [[String: Any]] {
+                                print(json)
                                                                 
                                 var datasources: [DataSource] = []
                                 
                                 for item in dataArray {
-                                    if let id = item["datasourceId"] as? String,
-                                       let name = item["name"] as? String,
-                                       let description = item["description"] as? String {
-                                        let datasource = DataSource(id: id, name: name, description: description)
+                                    if let id = item["datasourceId"] as? String {
+                                        let datasource = DataSource(id: id, name: "namefake", description: "descfake")
                                         
                                         datasources.append(datasource)
-                                
+                                print(datasource)
                                     }
                                 }
                                 
                                 completion(.success(datasources))
+                                
                             }
                         } catch {
                             completion(.failure(error))
@@ -382,10 +382,10 @@ struct AgentData: Codable {
 }
 
 struct AgentResponse: Codable {
-    let data: [Agent]
+    let data: [ProjectAgent]
 }
 
-struct Agent: Codable {
+struct ProjectAgent: Codable {
     let id: String
     let name: String
     let description: String
